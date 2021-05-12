@@ -32,7 +32,7 @@ By default, outputs are written to `notebooks/*_flake8.ipynb`We can clear and ov
 nb_report_inject flake8 --overwrite flake8_reports.txt
 ```
 
-By default, code cells with injected flake8 reports are annotated with a `flake8-error` tag and a `flake8-error-CODE` tag that identifies each distinct flake8 error codes reported for the cell (TO DO - also clear error code tags...); these can be explicilty enabled / disabled with the `--tags/--no-tags` flag:
+By default, code cells with injected flake8 reports are annotated with a generic `flake8-error` tag as well as a `flake8-error-CODE` tag for each distinct flake8 error code reported for that cell (TO DO - also clear error code tags...); these can be explicilty enabled / disabled with the `--tags/--no-tags` flag:
 
 ```
 nb_report_inject flake8 --no-tags flake8_reports.txt
