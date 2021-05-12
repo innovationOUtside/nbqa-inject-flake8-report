@@ -23,6 +23,7 @@ nb_report_inject flake8 flake8_reports.txt
 
 # Then to synch jupytext
 jupytext --sync  notebooks/*.ipynb
+# Jupytext doesn't map outputs but we need to keep timestamps in synch
 ```
 
 By default, outputs are written to `notebooks/*_flake8.ipynb`We can clear and overwrite output cells in the reported on notebooks with the `--overwrite / --no-overwrite` flag:
@@ -31,7 +32,7 @@ By default, outputs are written to `notebooks/*_flake8.ipynb`We can clear and ov
 nb_report_inject flake8 --overwrite flake8_reports.txt
 ```
 
-By default, output cells are annotated with tags that identify flake8 error codes (TO DO - also clear error code tags...); these can be explicilty enabled / disabled with the `--tags/--no-tags` flag:
+By default, code cells with injected flake8 reports are annotated with tags that identify flake8 error codes (TO DO - also clear error code tags...); these can be explicilty enabled / disabled with the `--tags/--no-tags` flag:
 
 ```
 nb_report_inject flake8 --no-tags flake8_reports.txt
