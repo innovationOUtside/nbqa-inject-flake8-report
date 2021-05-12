@@ -8,7 +8,7 @@ setup(
     author_email="tony.hirst@gmail.com",
     description="Simple report injecter into ipynb.",
     long_description='''
-    Tools for injectin reports into ipynb Jupyter notebooks.
+    Tools for injecting reports into ipynb Jupyter notebooks.
     ''',
     long_description_content_type="text/markdown",
     install_requires=[
